@@ -27,8 +27,12 @@ Electric Vehicle Market Classification Dataset from Kaggle.
 
 Dataset: https://www.kaggle.com/datasets/tharishreddy22/electric-vehicle-market-classification-dataset
 
-## Dashboard Demo
-Tableau Public dashboard link will be added after publishing the final dashboard.
+## Tableau Dashboard Demo
+
+Explore the interactive Electric Vehicle Market Performance & Insights dashboard:
+
+[View Tableau Dashboard](https://public.tableau.com/views/EVMarketPerformanceInsights_17928843957760/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+
 
 ## Author
 EV Market Performance & Insights — Individual Capstone Project
