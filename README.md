@@ -56,16 +56,19 @@ The project covers the following five analyses:
 The following screenshots showcase the Flask dashboard interface and its visualizations.
 
 ### 1. Dashboard Overview
-![Dashboard Overview](screenshots/01-dashboard-overview.png)
+
+<img width="2880" height="1800" alt="Screenshot 2026-10-25 152203" src="https://github.com/user-attachments/assets/dc420c27-7122-47d9-a213-52b8976461dd" />
 
 ### 2. Manufacturer & Battery Analysis
-![Manufacturer and Battery Analysis](screenshots/02-manufacturer-battery-analysis.png)
+<img width="2880" height="1800" alt="Screenshot 2026-10-25 152253" src="https://github.com/user-attachments/assets/cab8fcb3-9abc-4766-bee5-279c24aba8b0" />
 
 ### 3. Sales & Customer Ratings
-![Sales and Customer Ratings](screenshots/03-sales-customer-ratings.png)
+<img width="2880" height="1800" alt="Screenshot 2026-10-25 152309" src="https://github.com/user-attachments/assets/b09f794e-4cb5-4981-bcca-27fb4bfecfdc" />
+
 
 ### 4. Vehicle Price Analysis
-![Vehicle Price Analysis](screenshots/04-vehicle-price-analysis.png)
+<img width="2880" height="1800" alt="Screenshot 2026-10-25 152340" src="https://github.com/user-attachments/assets/b4648cf9-4ce9-44bd-806f-78b3d9034367" />
+
 
 ## 📈 Tableau Dashboard
 
