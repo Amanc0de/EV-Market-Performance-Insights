@@ -1,38 +1,143 @@
-# Electric Vehicle Market Performance & Insights
+# ⚡ Electric Vehicle Market Performance & Insights
 
-## Project Overview
-This project analyzes the electric vehicle (EV) market using Tableau to explore manufacturer sales, battery technologies, vehicle categories, customer ratings, and EV market performance.
+An interactive data analytics project exploring electric vehicle (EV) market performance through **Tableau visualizations** and a **Python Flask web dashboard**.
 
-## Objectives
-- Analyze annual EV sales by manufacturer.
-- Compare battery technologies.
-- Explore electric vehicle categories.
-- Evaluate customer ratings.
-- Present key insights through an interactive Tableau dashboard.
+## 📌 Project Overview
 
-## Tools & Technologies
-- Tableau Public
-- Microsoft Excel / CSV
-- GitHub
+The *Electric Vehicle Market Performance & Insights* project analyzes EV market data to uncover insights into manufacturer sales, battery technologies, vehicle categories, customer ratings, driving range, and vehicle pricing.
 
-## Dashboard Worksheets
+The project includes an interactive Tableau dashboard for data visualization and a Flask-based web application built with Pandas and Plotly to present key performance indicators and interactive charts in a web interface.
+
+## 🎯 Project Objectives
+
+- Analyze annual EV sales across manufacturers.
+- Compare battery technologies using battery cycle life.
+- Explore sales distribution across EV categories.
+- Understand customer rating patterns.
+- Examine the relationship between vehicle price and driving range.
+- Present key market insights through interactive dashboards.
+
+## ✨ Key Features
+
+- **Interactive Dashboard:** Explore EV market data through dynamic visualizations.
+- **KPI Summary:** View total vehicles, annual sales, average vehicle price, and average customer rating.
+- **Manufacturer Sales Analysis:** Identify leading manufacturers by annual sales.
+- **Battery Technology Analysis:** Compare battery technologies by average cycle life.
+- **Vehicle Category Analysis:** Explore annual sales share by category.
+- **Customer Ratings Analysis:** Understand customer rating distributions.
+- **Price vs. Range Analysis:** Investigate the relationship between vehicle price and driving range.
+- **Two Visualization Platforms:** Tableau dashboard and a Flask-based web application.
+
+## 🛠️ Tools & Technologies
+
+| Technology | Purpose |
+|---|---|
+| Python | Data processing and application logic |
+| Flask | Web application framework |
+| Pandas | Data loading, cleaning, and analysis |
+| Plotly | Interactive charts and visualizations |
+| Tableau Public | Interactive business intelligence dashboard |
+| CSV / Kaggle Dataset | EV market data source |
+| HTML & CSS | Web dashboard interface |
+| GitHub | Source code management and project hosting |
+
+## 📊 Dashboard Analyses
+
+The project covers the following five analyses:
+
 1. EV Manufacturer Sales Analysis
 2. Battery Technology Analysis
 3. Vehicle Category Analysis
 4. Customer Ratings Analysis
-5. EV Price Analysis
+5. EV Price and Driving Range Analysis
 
-## Dataset
-Electric Vehicle Market Classification Dataset from Kaggle.
+## 🖥️ Flask Web Application Screenshots
 
-Dataset: https://www.kaggle.com/datasets/tharishreddy22/electric-vehicle-market-classification-dataset
+The following screenshots showcase the Flask dashboard interface and its visualizations.
 
-## Tableau Dashboard Demo
+### 1. Dashboard Overview
+![Dashboard Overview](screenshots/01-dashboard-overview.png)
 
-Explore the interactive Electric Vehicle Market Performance & Insights dashboard:
+### 2. Manufacturer & Battery Analysis
+![Manufacturer and Battery Analysis](screenshots/02-manufacturer-battery-analysis.png)
 
-[View Tableau Dashboard](https://public.tableau.com/views/EVMarketPerformanceInsights_17928843957760/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+### 3. Sales & Customer Ratings
+![Sales and Customer Ratings](screenshots/03-sales-customer-ratings.png)
 
+### 4. Vehicle Price Analysis
+![Vehicle Price Analysis](screenshots/04-vehicle-price-analysis.png)
 
-## Author
-EV Market Performance & Insights — Individual Capstone Project
+## 📈 Tableau Dashboard
+
+Explore the interactive Tableau dashboard:
+
+**[View Tableau Dashboard](https://public.tableau.com/views/EVMarketPerformanceInsights_17928843957760/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)**
+
+## 📂 Project Structure
+
+```text
+EV-Market-Performance-Insights/
+├── app.py
+├── ev_market_test.csv
+├── requirements.txt
+├── README.md
+├── templates/
+│   └── index.html
+└── screenshots/
+    ├── 01-dashboard-overview.png
+    ├── 02-manufacturer-battery-analysis.png
+    ├── 03-sales-customer-ratings.png
+    └── 04-vehicle-price-analysis.png
+```
+
+## 🚀 Run the Flask Application Locally
+
+### Prerequisites
+- Python 3 installed
+- pip package manager
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/Amanc0de/EV-Market-Performance-Insights.git
+cd EV-Market-Performance-Insights
+```
+
+**2. Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+**3. Start the application**
+
+```bash
+python app.py
+```
+
+**4. Open the dashboard**
+
+Visit the following address in your browser:
+
+```text
+http://127.0.0.1:5000
+```
+
+## 📁 Dataset
+
+The project uses the **Electric Vehicle Market Classification Dataset** from Kaggle.
+
+[View Dataset on Kaggle](https://www.kaggle.com/datasets/tharishreddy22/electric-vehicle-market-classification-dataset)
+
+The dataset contains EV attributes such as manufacturer, model year, battery specifications, driving range, vehicle price, annual sales, and customer ratings.
+
+## 👨‍💻 Author
+
+**Electric Vehicle Market Performance & Insights**  
+Individual Capstone Project
+
+---
+
+*This project combines data analytics, interactive visualization, and web development to explore insights into the electric vehicle market.*
