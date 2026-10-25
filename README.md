@@ -138,9 +138,6 @@ The dataset contains EV attributes such as manufacturer, model year, battery spe
 
 ## 👨‍💻 Author
 
-**Electric Vehicle Market Performance & Insights**  
-Individual Capstone Project
+**Aman Yadav**
 
----
-
-*This project combines data analytics, interactive visualization, and web development to explore insights into the electric vehicle market.*
+⭐ If you find this project useful, feel free to explore the dashboard and share your feedback.
