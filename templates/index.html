@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Market Performance & Insights</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #09111f;
+            color: #f3f7fc;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 36px 6%;
+            background: linear-gradient(120deg, #102d38, #10203a 65%, #17284a);
+            border-bottom: 1px solid #294052;
+        }
+
+        .eyebrow {
+            color: #50e3bd;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 4vw, 44px);
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            color: #bac9d9;
+            max-width: 720px;
+            line-height: 1.7;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1400px;
+            margin: 30px auto 50px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .kpi {
+            background: #121e30;
+            border: 1px solid #26384d;
+            border-radius: 14px;
+            padding: 23px;
+            min-width: 0;
+        }
+
+        .kpi-label {
+            color: #a9bacd;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .kpi-value {
+            font-size: clamp(21px, 2.5vw, 30px);
+            font-weight: 750;
+            color: #50e3bd;
+            overflow-wrap: anywhere;
+        }
+
+        .kpi-note {
+            font-size: 12px;
+            color: #8da1b7;
+            margin-top: 10px;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .chart-card {
+            background: #121e30;
+            border: 1px solid #26384d;
+            border-radius: 14px;
+            padding: 12px;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .chart-card.wide {
+            grid-column: 1 / -1;
+        }
+
+        .chart-card iframe {
+            width: 100%;
+            border: none;
+        }
+
+        .insight {
+            background: #102b2d;
+            border: 1px solid #226052;
+            border-radius: 14px;
+            padding: 22px;
+            margin: 28px 0;
+            line-height: 1.7;
+            color: #d6e9e5;
+        }
+
+        .insight strong {
+            color: #50e3bd;
+        }
+
+        .table-note {
+            color: #91a6bb;
+            font-size: 12px;
+            margin-top: 18px;
+        }
+
+        footer {
+            border-top: 1px solid #26384d;
+            padding: 25px 6%;
+            text-align: center;
+            color: #91a6bb;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #50e3bd;
+            text-decoration: none;
+        }
+
+        @media (max-width: 850px) {
+            .kpi-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-card.wide {
+                grid-column: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                width: 94%;
+            }
+
+            .kpi-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 28px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="eyebrow">Electric Mobility Analytics</div>
+        <h1>Electric Vehicle Market<br>Performance &amp; Insights</h1>
+        <p>
+            Explore EV sales, battery technology, vehicle categories,
+            customer ratings and pricing using the project's CSV dataset.
+        </p>
+    </header>
+
+    <main>
+        <h2 class="section-title">Market Overview</h2>
+
+        <section class="kpi-grid">
+            <div class="kpi">
+                <div class="kpi-label">Vehicles in Dataset</div>
+                <div class="kpi-value">{{ total_vehicles }}</div>
+                <div class="kpi-note">Number of vehicle records</div>
+            </div>
+
+            <div class="kpi">
+                <div class="kpi-label">Total Annual Sales</div>
+                <div class="kpi-value">{{ total_sales }}</div>
+                <div class="kpi-note">Sum of annual sales units</div>
+            </div>
+
+            <div class="kpi">
+                <div class="kpi-label">Average Vehicle Price</div>
+                <div class="kpi-value">{{ avg_price }}</div>
+                <div class="kpi-note">Average listed price in USD</div>
+            </div>
+
+            <div class="kpi">
+                <div class="kpi-label">Average Customer Rating</div>
+                <div class="kpi-value">{{ avg_rating }}</div>
+                <div class="kpi-note">Average rating out of 5</div>
+            </div>
+        </section>
+
+        <h2 class="section-title">Interactive Data Analysis</h2>
+
+        <section class="chart-grid">
+            {% for chart in charts %}
+                <div class="chart-card {% if loop.index == 5 %}wide{% endif %}">
+                    {{ chart | safe }}
+                </div>
+            {% endfor %}
+        </section>
+
+        <section class="insight">
+            <strong>Sales Leader in This Dataset:</strong>
+            {{ top_manufacturer }}
+            <br>
+            This manufacturer has the highest combined annual sales
+            among the manufacturers included in the dataset.
+        </section>
+
+        <p class="table-note">
+            Note: Results are calculated from ev_market_test.csv.
+            They describe the supplied dataset and should not automatically
+            be interpreted as complete real-world market totals.
+        </p>
+    </main>
+
+    <footer>
+        EV Market Performance &amp; Insights · Flask &amp; Python Analytics
+        <br><br>
+        <a href="https://public.tableau.com/views/EVMarketPerformanceInsights_17928843957760/Dashboard1?:language=en-US&publish=yes"
+           target="_blank" rel="noopener noreferrer">
+            View Tableau Dashboard
+        </a>
+    </footer>
+</body>
+</html>
